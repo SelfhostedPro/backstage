@@ -85,8 +85,10 @@ export class AwsIamStrategy implements AuthenticationStrategy {
         },
         params: {
           RoleArn: assumeRole,
+          RoleSessionName: 'backstage',
           ExternalId: externalId,
         },
+        
       });
     }
 
